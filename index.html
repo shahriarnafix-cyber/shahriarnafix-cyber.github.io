@@ -1,222 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shahriar - UI/UX Designer & Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shahriar Nafix // Terminal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Shahriar</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#about" class="nav-link">About Me</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  <div class="terminal">
+    <div class="output">
+      <span class="prompt">guest@shahriarnafix:~$ </span>
+      <span id="typewriter"></span>
+      <span class="cursor">|</span>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span>UI/UX Designer and Frontend Developer</span>
-                </div>
-                <h1>I'm <span class="highlight">Shahriar</span><br>Digital Designer<br>& Developer</h1>
-                <p>Creating beautiful, functional digital experiences that make a difference.</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn btn-primary">My Works <i class="fas fa-arrow-right"></i></a>
-                    <a href="#" class="btn btn-secondary">Download CV <i class="fas fa-download"></i></a>
-                </div>
-            </div>
-            <div class="hero-info">
-                <div class="info-card">
-                    <h3>Specialization:</h3>
-                    <p>UI/UX designer and frontend developer</p>
-                </div>
-                <div class="info-card">
-                    <h3>Based in:</h3>
-                    <p>Your Location</p>
-                </div>
-                <div class="cta-card">
-                    <h3>Let's Work Together!</h3>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="buttons" id="buttons" style="display: none;">
+      <a href="#projects" class="btn">Projects</a>
+      <a href="#blog" class="btn">Blog</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">Project 1</div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Web Application</h3>
-                        <p>Modern responsive web application with React</p>
-                        <span class="project-tag">UI/UX Design</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">Project 2</div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Mobile App</h3>
-                        <p>Cross-platform mobile application</p>
-                        <span class="project-tag">Development</span>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="image-placeholder">Project 3</div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Brand Identity</h3>
-                        <p>Complete brand design system</p>
-                        <span class="project-tag">Branding</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script>
+    const text = "Shahriar Nafix // Cybersecurity Analyst";
+    const typewriter = document.getElementById("typewriter");
+    const cursor = document.querySelector(".cursor");
+    const buttons = document.getElementById("buttons");
+    let i = 0;
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2>About Me</h2>
-                    <p>I'm a passionate UI/UX designer and frontend developer with expertise in creating digital experiences that are both beautiful and functional. I believe in the power of design to solve problems and create meaningful connections.</p>
-                    
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Frontend Development</h4>
-                            <ul>
-                                <li>HTML/CSS/JavaScript</li>
-                                <li>React & Vue.js</li>
-                                <li>Responsive Design</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>UI/UX Design</h4>
-                            <ul>
-                                <li>User Research</li>
-                                <li>Wireframing & Prototyping</li>
-                                <li>Interaction Design</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>3+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>30+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    function type() {
+      if (i < text.length) {
+        typewriter.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 80);
+      } else {
+        // Show buttons after typing
+        setTimeout(() => {
+          buttons.style.display = "flex";
+        }, 500);
+      }
+    }
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Let's Talk</h2>
-                    <p>Want to know more about me, tell me about your project or just to say hello? Drop me a line and I'll get back as soon as possible.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Your City, Country</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+1-XXX-XXX-XXXX</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>your-email@domain.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" required>
-                                <label for="name">Your Name*</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="company" name="company">
-                                <label for="company">Company Name</label>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" required>
-                                <label for="email">Email Address*</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone">
-                                <label for="phone">Phone Number</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                            <label for="message">A Few Words*</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            Send Message <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    // Blink cursor forever
+    setInterval(() => {
+      cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
+    }, 530);
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Shahriar. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    // Start typing after page load
+    window.onload = () => {
+      setTimeout(type, 800);
+    };
+  </script>
 </body>
 </html>
