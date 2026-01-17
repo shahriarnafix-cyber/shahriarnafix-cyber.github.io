@@ -2,55 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shahriar Nafix // Terminal</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Md. Shahariar Nafiz Irfan</title>
+
+  <!-- NOTICE: Change description if you want -->
+  <meta name="description" content="Multi-Asset Trader & Portfolio Manager" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="terminal">
-    <div class="output">
-      <span class="prompt">guest@shahriarnafix:~$ </span>
-      <span id="typewriter"></span>
-      <span class="cursor">|</span>
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="logo">SN</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi there 👋</h1>
+
+    <!-- NOTICE: Your name -->
+    <h2>I'm Md. Shahariar Nafiz Irfan</h2>
+
+    <!-- NOTICE: Your main title -->
+    <p class="subtitle">
+      Multi-Asset Trader & Portfolio Manager
+    </p>
+
+    <!-- NOTICE: Short intro text -->
+    <p>
+      I manage crypto, forex, and commodity portfolios using
+      price action, market sentiment, and disciplined risk management.
+    </p>
+
+    <div class="buttons">
+      <!-- NOTICE: Put your resume filename here -->
+      <a href="resume.pdf" target="_blank" class="btn">View CV</a>
+
+      <!-- NOTICE: Put your email -->
+      <a href="mailto:shahriarnafix@gmail.com" class="btn outline">Contact</a>
     </div>
 
-    <div class="buttons" id="buttons" style="display: none;">
-      <a href="#projects" class="btn">Projects</a>
-      <a href="#blog" class="btn">Blog</a>
-      <a href="#contact" class="btn">Contact</a>
+    <!-- NOTICE: Social links -->
+    <div class="socials">
+      <!-- Replace # with real links -->
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">GitHub</a>
+      <a href="https://instagram.com/kingpin_404" target="_blank">Instagram</a>
     </div>
   </div>
 
-  <script>
-    const text = "Shahriar Nafix // Cybersecurity Analyst";
-    const typewriter = document.getElementById("typewriter");
-    const cursor = document.querySelector(".cursor");
-    const buttons = document.getElementById("buttons");
-    let i = 0;
+  <div class="hero-img">
+    <!-- NOTICE: Your photo file -->
+    <img src="photo2.jpg" alt="Profile Photo">
+  </div>
+</section>
 
-    function type() {
-      if (i < text.length) {
-        typewriter.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 80);
-      } else {
-        // Show buttons after typing
-        setTimeout(() => {
-          buttons.style.display = "flex";
-        }, 500);
-      }
-    }
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h3>About Me</h3>
 
-    // Blink cursor forever
-    setInterval(() => {
-      cursor.style.visibility = cursor.style.visibility === "hidden" ? "visible" : "hidden";
-    }, 530);
+  <!-- NOTICE: Edit this text freely -->
+  <p>
+    I am an experienced multi-asset trader with hands-on expertise in
+    managing crypto, forex, and commodity portfolios. I’ve worked with
+    international clients, prop firms, and personal portfolios exceeding
+    3M+ BDT, focusing on consistency, discipline, and data-driven decisions.
+  </p>
+</section>
 
-    // Start typing after page load
-    window.onload = () => {
-      setTimeout(type, 800);
-    };
-  </script>
+<!-- ================= JOURNEY ================= -->
+<section id="journey">
+  <h3>My Journey</h3>
+
+  <ul class="timeline">
+    <!-- NOTICE: Edit years and text -->
+    <li>
+      <span>2020 – 2022</span>
+      <p>Learning trading fundamentals and market behavior</p>
+    </li>
+    <li>
+      <span>2023 – 2024</span>
+      <p>Active multi-asset trading & portfolio management</p>
+    </li>
+    <li>
+      <span>2024 – 2025</span>
+      <p>Prop firm trading & USA-based client portfolio management</p>
+    </li>
+  </ul>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h3>Skills</h3>
+
+  <div class="skills-grid">
+
+    <div class="card">
+      <h4>Trading</h4>
+      <ul>
+        <li>Forex, Crypto, Commodities</li>
+        <li>Price Action</li>
+        <li>Market Structure</li>
+        <li>Risk Management</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Tools</h4>
+      <ul>
+        <li>MetaTrader 5</li>
+        <li>MetaEditor (EA Bots)</li>
+        <li>Technical Indicators</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Experience</h4>
+      <ul>
+        <li>Personal Portfolio (3M+ BDT)</li>
+        <li>USA Client Management</li>
+        <li>Prop Firm Trading</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h3>Get In Touch</h3>
+
+  <p>Let’s work together or talk markets.</p>
+
+  <!-- NOTICE: Update contact details -->
+  <p>Email: <a href="mailto:shahriarnafix@gmail.com">shahriarnafix@gmail.com</a></p>
+  <p>Phone: +8801311339361</p>
+</section>
+
+<footer>
+  <p>© 2026 Md. Shahariar Nafiz Irfan</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
