@@ -2,7 +2,35 @@
 <!-- saved from url=(0038)https://shahriarnafix.wixsite.com/2026 -->
 <html lang="en" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  
+  <style>
+  /* 1. Hides the Wix Brand Banner (Common class names) */
+  #wix-brand-banner, 
+  .wix-ads, 
+  [id^="WIX_ADS"], 
+  iframe[src*="wix.com/ads"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+  }
+
+  /* 2. Fixes the layout gap left by the missing banner */
+  body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+</style>
+
+<script>
+  /* 3. Forces the Favicon to be blank or a custom one */
+  (function() {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='; // This is a transparent 1x1 pixel
+    document.getElementsByTagName('head')[0].appendChild(link);
+  })();
+</script>
+	
   <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Wix.com Website Builder">
